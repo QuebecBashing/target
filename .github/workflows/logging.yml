@@ -1,13 +1,13 @@
 name: Logging
 
 on:
-  workflow_dispatch:
+  pull_request_target:
       
 jobs:
   legit:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "legit"
+      - run: echo "${{ github.head_ref }}"
   nothing:
     runs-on: ubuntu-latest
     permissions: 
